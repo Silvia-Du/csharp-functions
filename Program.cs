@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 /*
- void StampaArray(int[] array): che preso un array di numeri interi, stampa a video il contenuto dell’array in questa forma “[elemento 1, elemento 2, elemento 3, ...]“.
+ void StampaArray(int[] array): che preso un array di numeri interi, stampa a video il contenuto dell’array in questa forma “[elemento 1, 
+elemento 2, elemento 3, ...]“.
 
 int Quadrato(int numero): che vi restituisca il quadrato del numero passato come parametro.
 
@@ -16,4 +17,19 @@ Stampare la somma di tutti i numeri
 Stampare la somma di tutti i numeri elevati al quadrati
   */
 
-void StampaArray(int[] array):
+int[] numberCollection = { 1, 3, 5, 8, 7, 8, 15, 18 };
+
+void StampaArray(int[] array)
+{
+    Console.Write("[");
+
+    for (int i = 0; i < array.Length-1; i++)
+    {
+        
+        Console.Write(array[i]+", ");
+    }
+        Console.Write(array[array.Length - 1]);
+        Console.WriteLine("]");
+}
+
+StampaArray(numberCollection);

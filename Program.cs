@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System;
 /*
  1- void StampaArray(int[] array): che preso un array di numeri interi, stampa a video il contenuto dell’array in questa forma “[elemento 1, 
     elemento 2, elemento 3, ...]“.
@@ -19,9 +20,37 @@ Stampare la somma di tutti i numeri
 Stampare la somma di tutti i numeri elevati al quadrati
   */
 
+/*
+ * 
+    Bonus: Convertire le funzioni appena dichiarate in funzioni generiche, 
+    ossia funzioni che possono lavorare con array di numeri interi di lunghezza variabile, 
+    ossia debbono poter funzionare sia che gli passi array di 5 elementi, sia di 6, di 7, di ... 
+    e così via. A questo punto modificare il programma in modo che chieda all’utente quanti numeri 
+    voglia inserire, e dopo di che questi vengono inseriti a mano dall’utente esternamente.
+    Rieseguire il programma con l’input preso esternamente dall’utente.
+ * */
+
+
+
+Console.WriteLine("Quanti numeri vuoi inserire nella tua Collection?");
+int userNumber = Convert.ToInt32(Console.ReadLine());
+int[] userNumCollection;
+
+if (userNumber != 0)
+{
+    userNumCollection = new int[userNumber];
+
+    for (int i = 0; i < userNumber; i++)
+    {
+        Console.WriteLine($"inserisci il {i + 1}' numero");
+        userNumCollection[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    stampaAVideo(userNumCollection);
+}
+
 
 //1
-using System;
+
 
 int[] numberCollection = { 1, 3, 5, 8, 7, 8, 15, 18 };
 
@@ -109,7 +138,14 @@ void stampaAVideo(int[] array)
     Console.WriteLine($"La somma dei quadrati degli elementi dell'array è :{sommaElementiArray(solution)}");
 }
 
-stampaAVideo(numArray);
+
+
+
+
+
+
+
+
 
 
 
